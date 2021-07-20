@@ -58,3 +58,60 @@ You develop **applications** in the context of an Angular **workspace**. A **wor
 
   Use : {{component}}
 </details>
+
+
+<details>
+  <summary>
+    1. The Hero editor
+  </summary>
+  
+  ```bash 
+  ng generate component heroes
+  ```
+  
+  Generate in `heroes.component.ts` : 
+  
+  ```ts 
+  import { Component, OnInit } from '@angular/core';
+
+  @Component({
+    selector: 'app-heroes',
+    templateUrl: './heroes.component.html',
+    styleUrls: ['./heroes.component.css']
+  })
+  export class HeroesComponent implements OnInit {
+
+    constructor() { }
+
+    ngOnInit(): void {
+    }
+
+  }
+  ```
+  
+  You always import the **Component** symbol from the Angular core library and annotate the component class with `@Component`.
+
+  `@Component` is a decorator function that specifies the Angular metadata for the component.
+
+  The CLI generated three metadata properties:
+
+  1. **selector** — the component's **CSS** element selector
+  1. **templateUrl** — the **location** of the component's template file.
+  1. **styleUrls** — the **location** of the component's private **CSS** styles.
+  
+  Always **export** the component class so you can **import it elsewhere** ... like in the AppModule.
+  
+  
+  ---
+  
+  `[(ngModel)]` is Angular's two-way data binding syntax.
+
+  Here it binds the `hero.name` property to the HTML textbox so that data can flow in both directions: **from** the `hero.name` property **to** the textbox, and **from** the textbox back **to** the `hero.name`.
+  
+  
+</details>
+
+
+
+
+
