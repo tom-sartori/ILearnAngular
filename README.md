@@ -112,6 +112,26 @@ You develop **applications** in the context of an Angular **workspace**. A **wor
 </details>
 
 
+<details>
+  <summary>
+    2. Display a list 
+  </summary>
+
+  List syntax : 
+  ```ts
+  const HEROES: Hero[] = [
+      { id: 11, name: 'Dr Nice' },
+      { id: 12, name: 'Narco' },
+  ];
+  ```
+  
+  Iteration on the html file : 
+  ```angular2html
+  <li *ngFor="let hero of heroes" >
+  ```
+
+</details>
+
 
 
 
