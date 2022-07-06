@@ -1,4 +1,4 @@
 # ILearnAngular
 ## Made by Tom Sartori
 
-Angular cli sample. 
+Classic test of angular. 
