@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
 
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatListModule} from "@angular/material/list";
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
+import { HeaderComponent } from './header/header.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import {HttpClientModule} from "@angular/common/http";
-import {RouterModule} from "@angular/router";
-import { Element1Component } from './element1/element1.component';
-import { Element2Component } from './element2/element2.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from "@angular/common/http";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { ChildAComponent } from './child-a/child-a.component';
+import { ChildBComponent } from './child-b/child-b.component';
 
 
 @NgModule({
@@ -22,10 +23,11 @@ import { Element2Component } from './element2/element2.component';
     AppComponent,
     HeaderComponent,
     ToolbarComponent,
-    Element1Component,
-    Element2Component
+    ChildAComponent,
+    ChildBComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -34,7 +36,6 @@ import { Element2Component } from './element2/element2.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
